@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Catálogo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Exhibimuebles Valsequillo</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: 2rem; background-color: var(--color-fondo);">
+        <h1 style="text-align: center; color: var(--color-secundario);">Contáctanos</h1>
+        <p style="text-align: center; margin-bottom: 2rem;">¿Te interesa una medida especial o tienes dudas sobre nuestros colores? Escríbenos.</p>
+        
+        <div class="contacto-wrapper">
+            
+            <div class="formulario-contacto">
+                <form id="form-whatsapp">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Tu Teléfono / WhatsApp</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 555 123 4567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mueble">Mueble de interés</label>
+                        <input type="text" id="mueble" name="mueble" placeholder="Ej. Vitrina hexagonal, Módulo de cobro...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje o especificaciones</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí las medidas o dudas que tengas..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">Enviar Mensaje por WhatsApp</button>
+                </form>
+            </div>
+
+            <div class="info-contacto">
+                <h3>Atención Directa</h3>
+                <p><strong>📞 Teléfono / WhatsApp:</strong> +52 1 222 442 9563</p>
+                <p style="margin-top: 10px;"><strong>📍 Ubicación:</strong> Bv. Carlos Camacho 525-1, San Francisco Totimehuacan, 72595 Heroica Puebla de Zaragoza, Pue. México</p>
+                <p><strong>¡¡Frente a mercado municipal Mario Marín!!</strong></p>
+                
+                <h3 style="margin-top: 2rem;">Horarios de Atención</h3>
+                <p>Lunes a Viernes: 9:00 am - 6:00 pm</p>
+                <p>Sábados: 9:00 am - 2:00 pm</p>
+
+                <div style="margin-top: 2rem; padding: 15px; border-left: 4px solid var(--color-principal); background-color: #FFF3E0;">
+                    <p style="font-size: 0.9rem; color: #E65100;"><strong>Nota:</strong> Todos los colores especiales y medidas personalizadas se trabajan bajo pedido y requieren un tiempo de fabricación.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('form-whatsapp').addEventListener('submit', function(event) {
+            // Evita que la página se recargue al dar clic en enviar
+            event.preventDefault(); 
+
+            // Extraemos lo que el cliente escribió en las casillas
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const mueble = document.getElementById('mueble').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // Tu número de la empresa sin el signo + ni espacios
+            const numeroEmpresa = "5212224429563";
+
+            // Armamos el formato del mensaje usando asteriscos (*) para poner negritas en WhatsApp
+            let texto = `Hola, mi nombre es *${nombre}*.\n`;
+            texto += `Mi número es: ${telefono}\n`;
+            texto += `Me interesa el producto: *${mueble}*\n\n`;
+            texto += `Mensaje: ${mensaje}`;
+
+            // Transformamos el texto a un formato que el navegador de internet entienda (cambia espacios por %20)
+            const textoCodificado = encodeURIComponent(texto);
+
+            // Creamos el enlace (API oficial) de WhatsApp
+            const url = `https://wa.me/${numeroEmpresa}?text=${textoCodificado}`;
+
+            // Abrimos WhatsApp en una pestaña nueva para que no cierren tu página
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
