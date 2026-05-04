@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Exhibimuebles Valsequillo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Exhibimuebles Valsequillo</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="titulo-pagina" style="text-align: center; padding: 2rem; color: var(--color-secundario);">Categorías de Productos</h1>
+
+        <button id="btn-regresar" class="btn-regresar" onclick="volverACategorias()">← Volver a Categorías</button>
+
+        <div id="vista-categorias">
+            
+            <div class="categoria-card" onclick="mostrarCatalogo('cat-aluminio', 'Exhibidores y Muebles de Aluminio')">
+                <div class="categoria-img" style="background-image: url('assets/mostrador.jpeg'); background-color: #ddd;"></div>
+                <div class="categoria-overlay">
+                    <h2>Exhibidores y Muebles de Aluminio</h2>
+                    <span>Ver Modelos →</span>
+                </div>
+            </div>
+
+            <div class="categoria-card" onclick="mostrarCatalogo('cat-lamina', 'Estantería y Modelos en Lámina')">
+                <div class="categoria-img" style="background-image: url('assets/estante.jpeg'); background-color: #ccc;"></div>
+                <div class="categoria-overlay">
+                    <h2>Estantería y Modelos en Lámina</h2>
+                    <span>Explorar Diseños →</span>
+                </div>
+            </div>
+
+            <div class="categoria-card" onclick="mostrarCatalogo('cat-accesorios', 'Maniquíes, Racks y Accesorios')">
+                <div class="categoria-img" style="background-image: url('assets/maniquiCompleto.jpeg'); background-color: #bbb;"></div>
+                <div class="categoria-overlay">
+                    <h2>Maniquíes, Racks y Accesorios</h2>
+                    <span>Ver Catálogo →</span>
+                </div>
+            </div>
+
+            <div class="categoria-card" onclick="mostrarCatalogo('cat-hogar', 'Fruteros y de Hogar')">
+                <div class="categoria-img" style="background-image: url('assets/frutero.jpeg'); background-color: #aaa;"></div>
+                <div class="categoria-overlay">
+                    <h2>Fruteros y de Hogar</h2>
+                    <span>Ver Productos →</span>
+                </div>
+            </div>
+
+        </div>
+
+        <section id="cat-aluminio" class="seccion-productos">
+            <div class="productos-grid" style="padding: 0 5%;">
+                
+                <div class="producto-card">
+                    <img src="assets/mostrador.jpeg" alt="Mostradores">
+                    <div class="producto-info">
+                        <h3>Mostradores</h3>
+                        <p><strong>Medidas estandar: 1.0m, 1.20m, 1.50m, 1.80m, 2.0m y 2.40m</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/zapato.jpeg" alt="Mueble tipo zapato">
+                    <div class="producto-info">
+                        <h3>Mueble tipo "zapato"</h3>
+                        <p><strong>Medidas estandar: 1.0m, 1.20m, 1.50m, 1.80m, 2.0m y 2.40m</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/L.jpeg" alt="Mueble tipo L">
+                    <div class="producto-info">
+                        <h3>Mueble tipo "L"</h3>
+                        <p><strong>Medidas estandar: 1.0m, 1.20m, 1.50m, 1.80m, 2.0m y 2.40m</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/aparador.jpeg" alt="Aparadores">
+                    <div class="producto-info">
+                        <h3>Aparadores</h3>
+                        <p><strong>Medidas estandar: 1.0m, 1.20m, 1.50m, 1.80m, 2.0m y 2.40m</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/modulo.jpeg" alt="Módulos de cobro">
+                    <div class="producto-info">
+                        <h3>Módulos de cobro</h3>
+                        <p><strong>Medidas estandar: 50x40x110cm</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/diamante.jpeg" alt="Exhibidor tipo Diamante">
+                    <div class="producto-info">
+                        <h3>Exhibidor tipo Diamante</h3>
+                        <p><strong>Medidas estandar: 60cmx180cm y 60cmx200cm</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/exagonal.jpeg" alt="Exhibidor tipo Hexágono">
+                    <div class="producto-info">
+                        <h3>Exhibidor tipo Hexágono</h3>
+                        <p><strong>Medidas estandar: 45cmx100cmx180cm y 45cmx100cmx200cm</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/torre.jpeg" alt="Exhibidor tipo torre">
+                    <div class="producto-info">
+                        <h3>Exhibidor tipo torre</h3>
+                        <p><strong>Medidas estandar: 40x40x180cm y 40x40x200cm</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/tipoPasillo.jpeg" alt="Muebles de Autoservicio">
+                    <div class="producto-info">
+                        <h3>Muebles de Autoservicio</h3>
+                        <p><strong>Medidas y cotizaciones: Mandar mensaje al WhatsApp</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/dulceroMostrador.jpeg" alt="Dulceros tipo mostrador">
+                    <div class="producto-info">
+                        <h3>Dulceros tipo mostrador</h3>
+                        <p><strong>Medidas estandar: 1.0m, 1.20m, 1.50m, 1.80m, 2.0m y 2.40m</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/dulcera.jpeg" alt="Dulceros de mesa con base">
+                    <div class="producto-info">
+                        <h3>Dulceros de mesa con base</h3>
+                        <p><strong>Divisiones disponibles: 12, 16, 20, 24 (Personalizaciones a cotización)</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/exagonalita.jpeg" alt="Hexagonales giratorios">
+                    <div class="producto-info">
+                        <h3>Hexagonales giratorios</h3>
+                        <p><strong>Medidas estandar: 35cm x 80cm</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cat-lamina" class="seccion-productos">
+            <div class="productos-grid" style="padding: 0 5%;">
+                
+                <div class="producto-card">
+                    <img src="assets/estante.jpeg" alt="Estante 30x85">
+                    <div class="producto-info">
+                        <h3>Estante sencillo</h3>
+                        <p><strong>Medidas y variantes: 30x85cm</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/estanteReforzado.jpeg" alt="Estante 45x85">
+                    <div class="producto-info">
+                        <h3>Estante reforzado</h3>
+                        <p><strong>Medidas y variantes: 45x85cm</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/estanteExtraReforzado.jpeg" alt="Estante 60x85">
+                    <div class="producto-info">
+                        <h3>Estante extra reforzado</h3>
+                        <p><strong>Medidas y variantes: 60x85cm</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/gondolaCentral.jpeg" alt="Góndolas centrales y de pared">
+                    <div class="producto-info">
+                        <h3>Góndolas centrales y de pared</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/mostradorLamina.jpeg" alt="Mostradores de lámina">
+                    <div class="producto-info">
+                        <h3>Mostradores de lámina</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/cajonera.jpeg" alt="Cajoneras de lámina">
+                    <div class="producto-info">
+                        <h3>Cajoneras de lámina</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/semillero.jpeg" alt="Semilleros y Fruteros de lámina">
+                    <div class="producto-info">
+                        <h3>Semilleros y Fruteros de lámina</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/Gabinete.jpeg" alt="Gabinete y Locker de lámina">
+                    <div class="producto-info">
+                        <h3>Gabinete y Locker de lámina</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul>
+                            <li>Disponibilidad de colores</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cat-accesorios" class="seccion-productos">
+            <div class="productos-grid" style="padding: 0 5%;">
+                
+                <div class="producto-card">
+                    <img src="assets/maniquiCompleto.jpeg" alt="Maniquíe completo">
+                    <div class="producto-info">
+                        <h3>Maniquí completo plástico y fibra de vidrio</h3>
+                        <p><strong>Tamaño y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/pantaloneras.jpeg" alt="Pantaloneras y porta blusas">
+                    <div class="producto-info">
+                        <h3>Pantaloneras y porta blusas</h3>
+                        <p><strong>Tamaño y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/rack.jpeg" alt="Racks 1m">
+                    <div class="producto-info">
+                        <h3>Racks sencillos y dobles</h3>
+                        <p><strong>Medidas: 1m y 1.50m</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/rejas.jpeg" alt="Rejas exhibidoras">
+                    <div class="producto-info">
+                        <h3>Rejas exhibidoras</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/exhibipanel.jpeg" alt="Hoja de exhibipanel">
+                    <div class="producto-info">
+                        <h3>Hoja de exhibipanel</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/blistersCascadas.jpeg" alt="Blisters y cascadas">
+                    <div class="producto-info">
+                        <h3>Blisters y cascadas</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/zapatera.jpeg" alt="Zapateras">
+                    <div class="producto-info">
+                        <h3>Zapateras y accesorios para panel</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cat-hogar" class="seccion-productos">
+            <div class="productos-grid" style="padding: 0 5%;">
+                
+                <div class="producto-card">
+                    <img src="assets/frutero.jpeg" alt="Fruteros niveles">
+                    <div class="producto-info">
+                        <h3>Fruteros</h3>
+                        <p><strong>Medidas: 5, 4 y 3 niveles</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/Portagarrafones.jpeg" alt="Portagarrafones">
+                    <div class="producto-info">
+                        <h3>Portagarrafones</h3>
+                        <p><strong>Medidas y variantes: Sencillo, doble y triple</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/galleteros.jpeg" alt="Galleteros">
+                    <div class="producto-info">
+                        <h3>Galleteros</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/frutero.jpeg" alt="Fruteros de mesa">
+                    <div class="producto-info">
+                        <h3>Fruteros de mesa</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <img src="assets/Confiteros.jpeg" alt="Confiteros">
+                    <div class="producto-info">
+                        <h3>Confiteros</h3>
+                        <p><strong>Medidas y variantes: Consultar disponibilidad</strong></p>
+                        <ul><li>Disponibilidad de colores</li></ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function mostrarCatalogo(idCategoria, nombreCategoria) {
+            document.getElementById('vista-categorias').style.display = 'none';
+            const secciones = document.querySelectorAll('.seccion-productos');
+            secciones.forEach(sec => sec.style.display = 'none');
+            document.getElementById(idCategoria).style.display = 'block';
+            document.getElementById('btn-regresar').style.display = 'block';
+            document.getElementById('titulo-pagina').innerText = nombreCategoria;
+            window.scrollTo(0, 0);
+        }
+
+        function volverACategorias() {
+            document.getElementById('vista-categorias').style.display = 'grid';
+            const secciones = document.querySelectorAll('.seccion-productos');
+            secciones.forEach(sec => sec.style.display = 'none');
+            document.getElementById('btn-regresar').style.display = 'none';
+            document.getElementById('titulo-pagina').innerText = "Categorías de Productos";
+        }
+    </script>
+</body>
+</html>
