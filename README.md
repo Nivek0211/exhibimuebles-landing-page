@@ -1,6 +1,6 @@
 # Exhibimuebles Valsequillo - Landing Page & Catálogo Dinámico
 
-### [VER SITIO EN VIVO](https://exhibimuebles-valsequillo.netlify.app/) 🚀
+### [VER SITIO EN VIVO](https://exhibimuebles-valsequillo.netlify.app/) 
 
 ## Descripción del Proyecto
 Este proyecto es una solución digital real desarrollada para una empresa dedicada a la fabricación y venta de mobiliario y exhibidores metálicos y de aluminio. El objetivo principal fue digitalizar su catálogo de productos para facilitar la preventa y mejorar la presencia de la marca en el mercado regional.
